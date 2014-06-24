@@ -1,0 +1,1 @@
+for i in ~/.dotfiles/{aliases,functions,environment}/*.sh ; do . $i ; done

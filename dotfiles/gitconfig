@@ -1,0 +1,21 @@
+[user]
+  email = volmerius@gmail.com
+  name = Volmer Soares
+[color]
+  ui = true
+[push]
+  default = simple
+
+[credential]
+
+[core]
+  excludesfile = /Users/volmer/.gitignore
+  editor = subl --new-window --wait
+
+[hub]
+  protocol = https
+
+[merge]
+  ff = false
+[pull]
+  rebase = true
