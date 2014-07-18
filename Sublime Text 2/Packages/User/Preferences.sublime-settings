@@ -1,0 +1,15 @@
+{
+	"ensure_newline_at_eof_on_save": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"ruby_rspec_exec": "bundle exec rspec",
+	"ruby_unit_exec": "bundle exec ruby",
+	"soda_folder_icons": true,
+	"tab_size": 2,
+	"theme": "Soda Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": false
+}

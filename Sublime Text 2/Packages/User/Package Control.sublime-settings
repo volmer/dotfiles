@@ -1,0 +1,32 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"CoffeeScript",
+		"Cucumber",
+		"Git",
+		"GitHubinator",
+		"Haml",
+		"Highlight",
+		"HTML5",
+		"Indent XML",
+		"Jekyll",
+		"JsFormat",
+		"JSHint",
+		"LESS",
+		"NASM x86 Assembly",
+		"Package Control",
+		"Puppet",
+		"RSpec",
+		"ruby-slim.tmbundle",
+		"RubyTest",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"Surround",
+		"Theme - Soda",
+		"ToggleQuotes",
+		"TomDoc",
+		"TrailingSpaces"
+	]
+}
