@@ -1,1 +1,2 @@
-alias vs="vagrant ssh"
+alias v='vagrant'
+alias vs='vagrant ssh'
