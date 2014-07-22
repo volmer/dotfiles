@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+#
+# Takes a picture after a commit. This
+# script should be used as the `post-commit` hook.
+#
+# This script requires the installation of the `imagesnap` command-line tool.
+#
+# Example:
+#
+#   # Setup the hook by creating a symlink.
+#   ln -s ~/bin/post-commit-image .git/hooks/post-commit
+
+DIRECTORY = "#{ENV['HOME']}/Google Drive/gitshots"
+
+unless File.directory?(DIRECTORY)
+  puts "You must create a #{DIRECTORY} directory."
+  exit!(1)
+end
+
+if `which imagesnap` == ''
+  puts 'You must install `imagesnap`.'
+  exit!(1)
+end
+
+file_path = "#{DIRECTORY}/#{Time.now.to_i}.jpg"
+
+unless File.directory?(File.expand_path('../../rebase-merge', __FILE__))
+  puts "Taking capture into #{file_path}!"
+  system "imagesnap -q -w 3 #{file_path} &"
+end
+
+exit 0
