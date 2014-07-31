@@ -10,7 +10,7 @@
 #   # Setup the hook by creating a symlink.
 #   ln -s ~/bin/post-commit-image .git/hooks/post-commit
 
-DIRECTORY = "#{ENV['HOME']}/Google Drive/gitshots"
+DIRECTORY = "#{ENV['HOME']}/gitshots"
 
 unless File.directory?(DIRECTORY)
   puts "You must create a #{DIRECTORY} directory."
