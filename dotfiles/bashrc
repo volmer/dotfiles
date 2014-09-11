@@ -3,3 +3,6 @@
 for i in ~/.dotfiles/{aliases,functions,environment}/*.sh ; do
   source $i ;
 done
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

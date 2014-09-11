@@ -82,10 +82,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
-	<key>NSColorPanelMode</key>
-	<string>6</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
+	<string>~</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -109,21 +107,10 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
-	<key>NSToolbar Configuration Terminal Toolbar</key>
-	<dict>
-		<key>TB Display Mode</key>
-		<integer>1</integer>
-		<key>TB Icon Size Mode</key>
-		<integer>1</integer>
-		<key>TB Is Shown</key>
-		<integer>0</integer>
-		<key>TB Size Mode</key>
-		<integer>1</integer>
-	</dict>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 162 924 485 0 0 1280 778 </string>
+	<string>224 772 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 26 1277 752 0 0 1280 778 </string>
+	<string>1012 127 1438 852 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_45531006-CA88-424B-9A1C-299D1B431AA7</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -724,11 +711,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>best editor</string>
+				<string>command</string>
 				<key>editor</key>
 				<string>com.sublimetext.2</string>
 				<key>text</key>
-				<string></string>
+				<string>subl \1:\2</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -861,6 +848,8 @@
 			<string>/Users/volmer</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -907,7 +896,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~</string>
+	<string>/Users/volmer/Projects/dotfiles/iTerm</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -927,7 +916,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-07-18T02:46:00Z</date>
+	<date>2014-07-22T20:49:09Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
