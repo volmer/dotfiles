@@ -18,9 +18,9 @@ class GithubinatorCommand(sublime_plugin.TextCommand):
         DEFAULT_GITHUB_HOST = s.get("default_host")
         if DEFAULT_GITHUB_HOST is None:
             DEFAULT_GITHUB_HOST = "github.com"
-        
 
-    def run(self, edit, permalink = False, mode = 'blob'):
+
+    def run(self, edit, permalink = False, mode = 'blob', branch = None):
         self.load_config()
         if not self.view.file_name():
             return
@@ -48,20 +48,30 @@ class GithubinatorCommand(sublime_plugin.TextCommand):
         else:
             lines = '%s-%s' % (begin_line, end_line)
 
+        HTTP = 'https'
+        result = re.search(r'url.*?=.*?((https?)://([^/]*)/)|(git@([^:]*):)', config)
+        if result:
+            matches = result.groups()
+            if matches[0]:
+                HTTP = matches[1]
+                DEFAULT_GITHUB_HOST = matches[2]
+            else:
+                DEFAULT_GITHUB_HOST = matches[4]
+        
         re_host = re.escape(DEFAULT_GITHUB_HOST)
         for remote in DEFAULT_GIT_REMOTE:
-            regex = r'.*\s.*(?:https://%s/|%s:|git://%s/)(.*)/(.*?)(?:\.git)?\r?\n' % (re_host, re_host, re_host)
+            regex = r'.*\s.*(?:https?://%s/|%s:|git://%s/)(.*)/(.*?)(?:\.git)?\r?\n' % (re_host, re_host, re_host)
             result = re.search(remote + regex, config)
             if not result:
                 continue
             matches = result.groups()
 
             ref_path = open(os.path.join(git_path, '.git', 'HEAD'), "r").read().replace('ref: ', '')[:-1]
-            branch = ref_path.replace('refs/heads/','')
+            if branch is None: branch = ref_path.replace('refs/heads/','')
             sha = open(os.path.join(git_path, '.git', ref_path), "r").read()[:-1]
             target = sha if permalink else branch
 
-            full_link = 'https://%s/%s/%s/%s/%s%s/%s#L%s' % \
+            full_link = HTTP + '://%s/%s/%s/%s/%s%s/%s#L%s' % \
                 (DEFAULT_GITHUB_HOST, matches[0], matches[1], mode, target, new_git_path, file_name, lines)
             sublime.set_clipboard(full_link)
             sublime.status_message('Copied %s to clipboard.' % full_link)
