@@ -1,4 +1,0 @@
-{
-	"last_test_run": "ruby -Itest test/unit/liquid/drops/offsite_payment_line_drop_test.rb",
-	"last_test_working_dir": "/Users/volmer/shopify/vagrant/src/shopify"
-}
