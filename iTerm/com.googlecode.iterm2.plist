@@ -83,7 +83,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~</string>
+	<string>~/Documents</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -108,9 +108,11 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>224 772 924 485 0 0 2560 1418 </string>
+	<string>71 324 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1012 127 1438 852 0 0 2560 1418 </string>
+	<string>0 26 1438 851 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>398 167 570 451 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_45531006-CA88-424B-9A1C-299D1B431AA7</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -896,7 +898,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/volmer/Projects/dotfiles/iTerm</string>
+	<string>~/.dotfiles/iTerm</string>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -916,7 +918,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-07-22T20:49:09Z</date>
+	<date>2015-04-19T15:14:19Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -964,6 +966,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>1.0.0.20140629</string>
+	<string>2.0.0.20150412</string>
 </dict>
 </plist>
