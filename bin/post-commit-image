@@ -9,24 +9,32 @@
 #
 #   # Setup the hook by creating a symlink.
 #   ln -s ~/bin/post-commit-image .git/hooks/post-commit
+require 'socket'
 
-DIRECTORY = "#{ENV['HOME']}/gitshots"
+MY_MACHINE = 'Oathkeeper.local'
 
-unless File.directory?(DIRECTORY)
-  puts "You must create a #{DIRECTORY} directory."
-  exit!(1)
-end
+if Socket.gethostname == MY_MACHINE
+  DIRECTORY = "#{ENV['HOME']}/gitshots"
+  IMAGESNAP = '/usr/local/bin/imagesnap'
 
-if `which imagesnap` == ''
-  puts 'You must install `imagesnap`.'
-  exit!(1)
-end
+  unless File.directory?(DIRECTORY)
+    puts "You must create a #{DIRECTORY} directory."
+    exit!(1)
+  end
 
-file_path = "#{DIRECTORY}/#{Time.now.to_i}.jpg"
+  unless File.exists?(IMAGESNAP)
+    puts 'You must install `imagesnap`.'
+    exit!(1)
+  end
 
-unless File.directory?(File.expand_path('../../rebase-merge', __FILE__))
-  puts "Taking capture into #{file_path}!"
-  system "imagesnap -q -w 3 #{file_path} &"
+  file_path = "#{DIRECTORY}/#{Time.now.to_i}.jpg"
+
+  unless File.directory?(File.expand_path('../../rebase-merge', __FILE__))
+    puts "Taking capture into #{file_path}!"
+    system "#{IMAGESNAP} -q -w 3 #{file_path} &"
+  end
+else
+  system "ssh volmer@#{MY_MACHINE} /Users/volmer/.dotfiles/bin/post-commit-image"
 end
 
 exit 0
