@@ -11,10 +11,10 @@
 #   ln -s ~/bin/post-commit-image .git/hooks/post-commit
 require 'socket'
 
-MY_MACHINE = 'Oathkeeper.local'
-
-if Socket.gethostname == MY_MACHINE
-  DIRECTORY = ENV['HOME'] + '/Library/Mobile\ Documents/com~apple~CloudDocs/gitshots'
+if ENV['SHOPIFY_DEV_VAGRANT']
+  system 'ssh volmer@Oathkeeper.local /Users/volmer/.dotfiles/bin/post-commit-image'
+else
+  DIRECTORY = ENV['HOME'] + '/Library/Mobile Documents/com~apple~CloudDocs/gitshots'
   IMAGESNAP = '/usr/local/bin/imagesnap'
 
   unless File.directory?(DIRECTORY)
@@ -31,10 +31,8 @@ if Socket.gethostname == MY_MACHINE
 
   unless File.directory?(File.expand_path('../../rebase-merge', __FILE__))
     puts "Taking capture into #{file_path}!"
-    system "#{IMAGESNAP} -q -w 3 #{file_path} &"
+    system "#{IMAGESNAP} -q -w 3 #{file_path.sub(' ', '\ ')} &"
   end
-else
-  system "ssh volmer@#{MY_MACHINE} /Users/volmer/.dotfiles/bin/post-commit-image"
 end
 
 exit 0
