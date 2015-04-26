@@ -14,7 +14,7 @@ require 'socket'
 MY_MACHINE = 'Oathkeeper.local'
 
 if Socket.gethostname == MY_MACHINE
-  DIRECTORY = "#{ENV['HOME']}/gitshots"
+  DIRECTORY = ENV['HOME'] + '/Library/Mobile\ Documents/com~apple~CloudDocs/gitshots'
   IMAGESNAP = '/usr/local/bin/imagesnap'
 
   unless File.directory?(DIRECTORY)
