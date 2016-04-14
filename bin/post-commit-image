@@ -11,28 +11,22 @@
 #   ln -s ~/bin/post-commit-image .git/hooks/post-commit
 require 'socket'
 
-if ENV['SHOPIFY_DEV_VAGRANT']
-  system 'ssh volmer@Oathkeeper.local /Users/volmer/.dotfiles/bin/post-commit-image'
-else
-  DIRECTORY = ENV['HOME'] + '/Library/Mobile Documents/com~apple~CloudDocs/gitshots'
-  IMAGESNAP = '/usr/local/bin/imagesnap'
+DIRECTORY = ENV['HOME'] + '/Library/Mobile Documents/com~apple~CloudDocs/gitshots'
+IMAGESNAP = '/usr/local/bin/imagesnap'
 
-  unless File.directory?(DIRECTORY)
-    puts "You must create a #{DIRECTORY} directory."
-    exit!(1)
-  end
-
-  unless File.exists?(IMAGESNAP)
-    puts 'You must install `imagesnap`.'
-    exit!(1)
-  end
-
-  file_path = "#{DIRECTORY}/#{Time.now.to_i}.jpg"
-
-  unless File.directory?(File.expand_path('../../rebase-merge', __FILE__))
-    puts "Taking capture into #{file_path}!"
-    system "#{IMAGESNAP} -q -w 3 #{file_path.sub(' ', '\ ')} &"
-  end
+unless File.directory?(DIRECTORY)
+  puts "You must create a #{DIRECTORY} directory."
+  exit!(1)
 end
+
+unless File.exist?(IMAGESNAP)
+  puts 'You must install `imagesnap`.'
+  exit!(1)
+end
+
+file_path = "#{DIRECTORY}/#{Time.now.to_i}.jpg"
+
+puts "Taking capture into #{file_path}!"
+system "#{IMAGESNAP} -q -w 3 #{file_path.sub(' ', '\ ')} &"
 
 exit 0

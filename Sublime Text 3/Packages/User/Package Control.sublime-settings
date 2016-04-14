@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -19,7 +20,9 @@
 		"SublimeCodeIntel",
 		"SublimeHighlight",
 		"SublimeLinter",
+		"SublimeLinter-coffee",
 		"SublimeLinter-coffeelint",
+		"SublimeLinter-contrib-eslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-rubocop",
 		"SublimeLinter-ruby",
