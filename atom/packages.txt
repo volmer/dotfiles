@@ -1,0 +1,6 @@
+linter@1.11.4
+linter-coffeelint@1.1.2
+linter-eslint@7.2.1
+linter-rubocop@0.4.7
+linter-scss-lint@2.5.1
+omni-ruler@0.4.2

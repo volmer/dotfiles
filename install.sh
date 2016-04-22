@@ -8,7 +8,16 @@ for file in ~/.dotfiles/dotfiles/*; do
   ln -s -f $file ~/.$(basename $file)
 done
 
-if type "subl" > /dev/null 2>&1 ; then
-  echo "Installing Sublime Text 3 user prefrences..."
-  ln -s -i ~/.dotfiles/Sublime\ Text\ 3/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+if type "atom" > /dev/null 2>&1 ; then
+  echo "Installing Atom prefrences..."
+  for file in ~/.dotfiles/atom/*; do
+    echo "Installing $(basename $file)..."
+    ln -s -f $file ~/.atom/$(basename $file)
+  done
+
+  echo "Installing Atom packages..."
+  # To generate: apm list --installed --bare > ~/.dotfiles/atom/packages.txt
+  apm install --packages-file ~/.dotfiles/atom/packages.txt
+else
+  echo "Atom not found! Install Atom and re-run this command."
 fi

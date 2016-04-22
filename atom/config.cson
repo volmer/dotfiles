@@ -1,0 +1,16 @@
+"*":
+  core:
+    projectHome: "/Users/volmer/Projects"
+  editor:
+    tabType: "soft"
+  "exception-reporting":
+    userId: "daa7e17c-076f-c9bb-d265-3ce50248bbb1"
+  "omni-ruler":
+    columns: [
+      "80"
+      "120"
+    ]
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
