@@ -1,3 +1,4 @@
+language-gherkin@1.0.3
 linter@1.11.4
 linter-coffeelint@1.1.2
 linter-eslint@7.2.1
