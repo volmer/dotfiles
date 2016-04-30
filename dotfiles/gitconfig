@@ -10,7 +10,7 @@
 
 [core]
   excludesfile = /Users/volmer/.gitignore
-  editor = subl --new-window --wait
+  editor = atom --wait
 
 [hub]
   protocol = https
