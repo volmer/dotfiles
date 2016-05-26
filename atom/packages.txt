@@ -1,7 +1,9 @@
-language-gherkin@1.0.3
+language-gherkin@1.0.4
 linter@1.11.4
 linter-coffeelint@1.1.2
-linter-eslint@7.2.1
+linter-eslint@7.2.2
 linter-rubocop@0.4.7
-linter-scss-lint@2.5.1
+linter-scss-lint@3.0.4
 omni-ruler@0.4.2
+
+
