@@ -1,5 +1,5 @@
 language-gherkin@1.0.4
-linter@1.11.4
+linter@1.11.10
 linter-coffeelint@1.1.2
 linter-eslint@7.2.2
 linter-rubocop@0.4.7
