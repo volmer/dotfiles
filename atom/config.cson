@@ -1,6 +1,7 @@
 "*":
   core:
     projectHome: "/Users/volmer/Projects"
+    telemetryConsent: "no"
   editor:
     tabType: "soft"
   "exception-reporting":
