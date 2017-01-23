@@ -3,9 +3,12 @@
     projectHome: "/Users/volmer/Projects"
     telemetryConsent: "no"
   editor:
+    atomicSoftTabs: false
     tabType: "soft"
   "exception-reporting":
     userId: "daa7e17c-076f-c9bb-d265-3ce50248bbb1"
+  "linter-rubocop":
+    command: "bundle exec rubocop"
   "omni-ruler":
     columns: [
       "80"
