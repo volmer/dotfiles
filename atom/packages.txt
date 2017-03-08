@@ -1,9 +1,9 @@
 language-gherkin@1.0.4
-linter@1.11.21
+linter@1.11.23
 linter-coffeelint@1.2.1
-linter-eslint@8.0.0
-linter-rubocop@0.5.2
-linter-scss-lint@3.0.4
-omni-ruler@0.4.2
+linter-eslint@8.1.2
+linter-rubocop@1.1.0
+linter-scss-lint@3.1.0
+multi-wrap-guide@0.28.2
 sort-lines@0.14.0
 

@@ -1,5 +1,8 @@
 "*":
   core:
+    disabledPackages: [
+      "wrap-guide"
+    ]
     projectHome: "/Users/volmer/Projects"
     telemetryConsent: "no"
   editor:
@@ -9,11 +12,20 @@
     userId: "daa7e17c-076f-c9bb-d265-3ce50248bbb1"
   "linter-rubocop":
     command: "bundle exec rubocop"
+    disableWhenNoConfigFile: true
+  "multi-wrap-guide":
+    columns: [
+      80
+      120
+    ]
+    locked: true
   "omni-ruler":
     columns: [
       "80"
       "120"
     ]
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:
