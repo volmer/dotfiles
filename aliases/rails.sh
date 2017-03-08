@@ -1,3 +1,3 @@
-alias rc="bundle exec rails console"
-alias sr="bundle exec rails server"
-alias rt="bundle exec ruby -Itest"
+alias rc="bin/rails console"
+alias sr="bin/rails server"
+alias rt="bin/rails test"
