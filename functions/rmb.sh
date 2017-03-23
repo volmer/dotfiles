@@ -19,6 +19,7 @@ function rmb () {
 
     if [ -n "$remote_branches" ]; then
       echo "$remote_branches"
+      ~/.dotfiles/bin/open_prs "$remote_branches"
     fi
 
     if [ -n "$local_branches" ]; then

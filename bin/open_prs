@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+require 'octokit'
+
+access_token = File.read("#{Dir.home}/.github").strip
+
+client = Octokit::Client.new(access_token: access_token)
+
+git_config = File.read(File.expand_path('.git/config'))
+github_repo = /git@github.com:(\w+\/\w+).git/.match(git_config)[1]
+
+ARGV.first.split(/\s/).reject { |b| b.to_s.empty? }.each do |branch|
+  branch = branch.gsub(/\A\w+\//, '')
+  prs = client.pull_requests(github_repo, base: branch, state: 'open')
+  if prs.any?
+    puts "Pull requests based on #{branch}"
+    prs.each do |pr|
+      puts "  * ##{pr.number} by #{pr.user.login} - #{pr.html_url}"
+    end
+  end
+end
