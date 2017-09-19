@@ -13,6 +13,9 @@
   "linter-rubocop":
     command: "bundle exec rubocop"
     disableWhenNoConfigFile: true
+  "linter-ui-default":
+    panelHeight: 69
+    showPanel: true
   "multi-wrap-guide":
     columns: [
       80
@@ -24,8 +27,7 @@
       "80"
       "120"
     ]
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
   whitespace:
