@@ -7,6 +7,7 @@
     telemetryConsent: "no"
   editor:
     atomicSoftTabs: false
+    fontSize: 15
     tabType: "soft"
   "exception-reporting":
     userId: "daa7e17c-076f-c9bb-d265-3ce50248bbb1"
