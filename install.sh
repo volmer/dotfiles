@@ -4,7 +4,8 @@ echo "Installing Brew bundle..."
 brew bundle
 
 echo "Symlinking $PWD..."
-ln -s -f $PWD ~/.dotfiles
+rm -f ~/.dotfiles
+ln -s $PWD ~/.dotfiles
 
 for file in ~/.dotfiles/dotfiles/*; do
   echo "Installing $(basename $file)..."
