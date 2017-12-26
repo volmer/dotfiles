@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "Installing Brew bundle..."
+brew bundle
+
 echo "Symlinking $PWD..."
 ln -s -f $PWD ~/.dotfiles
 
