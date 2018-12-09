@@ -19,3 +19,7 @@
   ff = false
 [pull]
   rebase = true
+[diff]
+	algorithm = patience
+[protocol]
+	version = 2

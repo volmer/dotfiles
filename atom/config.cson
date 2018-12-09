@@ -13,8 +13,11 @@
   "linter-rubocop":
     command: "bundle exec rubocop"
     disableWhenNoConfigFile: true
+  "linter-scss-lint":
+    disableWhenNoConfigFileInPath: true
+    executablePath: "bundle exec scss-lint"
   "linter-ui-default":
-    panelHeight: 69
+    panelHeight: 105
     showPanel: true
   "multi-wrap-guide":
     columns: [
