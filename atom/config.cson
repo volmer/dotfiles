@@ -13,9 +13,6 @@
   "linter-rubocop":
     command: "bundle exec rubocop"
     disableWhenNoConfigFile: true
-  "linter-scss-lint":
-    disableWhenNoConfigFileInPath: true
-    executablePath: "bundle exec scss-lint"
   "linter-ui-default":
     panelHeight: 105
     showPanel: true
@@ -25,12 +22,6 @@
       120
     ]
     locked: true
-  "omni-ruler":
-    columns: [
-      "80"
-      "120"
-    ]
-  "tree-view": {}
   welcome:
     showOnStartup: false
   whitespace:
