@@ -1,12 +1,7 @@
 busy-signal@1.4.3
 intentions@1.1.5
-language-liquid@0.7.0
 linter@2.2.0
-linter-coffeelint@2.0.1
-linter-eslint@8.4.1
 linter-rubocop@2.2.3
-linter-scss-lint@3.1.1
 linter-ui-default@1.7.1
 multi-wrap-guide@1.1.6
-sort-lines@0.18.0
 
