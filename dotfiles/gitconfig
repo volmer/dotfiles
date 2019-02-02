@@ -7,6 +7,7 @@
   default = simple
 
 [credential]
+	helper = osxkeychain
 
 [core]
   excludesfile = /Users/volmer/.gitignore
@@ -23,3 +24,12 @@
 	algorithm = patience
 [protocol]
 	version = 2
+[protocol "galaxy"]
+	allow = always
+[url "galaxy::Shopify/"]
+	insteadOf = https://github.com/Shopify/
+	insteadOf = git@github.com:Shopify/
+[url "https://github.com/Shopify/"]
+	pushInsteadOf = https://github.com/Shopify/
+[url "git@github.com:Shopify/"]
+	pushInsteadOf = git@github.com:Shopify/
