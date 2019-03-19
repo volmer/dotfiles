@@ -22,6 +22,9 @@
       120
     ]
     locked: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      showInStatusBar: true
   welcome:
     showOnStartup: false
   whitespace:
