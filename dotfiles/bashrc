@@ -1,5 +1,5 @@
 #!/bin/bash
 
-for i in ~/.dotfiles/{aliases,functions,environment}/*.sh ; do
+for i in ~/.dotfiles/{aliases,environment}/*.sh ; do
   source $i ;
 done
