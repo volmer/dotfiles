@@ -15,7 +15,6 @@
     disableWhenNoConfigFile: true
   "linter-ui-default":
     panelHeight: 105
-    showPanel: true
   "multi-wrap-guide":
     columns: [
       80
@@ -24,6 +23,9 @@
     locked: true
   "prettier-atom":
     formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNoConfigFile: true
+      isDisabledIfNotInPackageJson: true
       showInStatusBar: true
   welcome:
     showOnStartup: false
