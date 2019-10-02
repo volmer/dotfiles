@@ -2,8 +2,8 @@ atom-typescript@13.3.0
 busy-signal@2.0.1
 intentions@1.1.5
 linter@2.3.1
-linter-rubocop@2.2.4
-linter-ui-default@1.7.1
-multi-wrap-guide@1.1.6
+linter-rubocop@2.4.2
+linter-ui-default@1.8.0
+multi-wrap-guide@1.1.8
 prettier-atom@0.57.2
 

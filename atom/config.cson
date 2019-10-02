@@ -7,6 +7,7 @@
     telemetryConsent: "no"
   editor:
     atomicSoftTabs: false
+    showIndentGuide: true
     tabType: "soft"
   "exception-reporting":
     userId: "daa7e17c-076f-c9bb-d265-3ce50248bbb1"
@@ -15,6 +16,7 @@
     disableWhenNoConfigFile: true
   "linter-ui-default":
     panelHeight: 105
+    showPanel: true
   "multi-wrap-guide":
     columns: [
       80

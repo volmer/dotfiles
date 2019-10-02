@@ -12,6 +12,7 @@
 [core]
   excludesfile = /Users/volmer/.gitignore
   editor = atom --wait
+	commitGraph = true
 
 [hub]
   protocol = https
@@ -24,3 +25,5 @@
 	algorithm = patience
 [protocol]
 	version = 2
+[gc]
+	writeCommitGraph = true
