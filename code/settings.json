@@ -18,5 +18,8 @@
     },
     "files.trimTrailingWhitespace": true,
     "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "ruby.intellisense": "rubyLocate",
+    "ruby.codeCompletion": "rcodetools",
+    "eslint.packageManager": "yarn"
 }
