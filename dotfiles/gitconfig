@@ -1,29 +1,16 @@
 [user]
   email = git@radicaos.com
   name = Volmer Campos Soares
+
 [color]
   ui = true
-[push]
-  default = simple
-
-[credential]
-	helper = osxkeychain
 
 [core]
   excludesfile = /Users/volmer/.gitignore
   editor = code --wait
-	commitGraph = true
-
-[hub]
-  protocol = https
 
 [merge]
   ff = false
+
 [pull]
   rebase = true
-[diff]
-	algorithm = patience
-[protocol]
-	version = 2
-[gc]
-	writeCommitGraph = true
