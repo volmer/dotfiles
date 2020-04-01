@@ -26,7 +26,12 @@ end
 
 file_path = "#{DIRECTORY}/#{Time.now.to_i}.jpg"
 
+# Use the HD Pro Webcam instead of the built-in camera when one is available.
+devices = `#{IMAGESNAP} -l`.scan(/\[([^\[]+)\]\[/).map(&:first)
+device = devices.find { |device| device.include?('HD Pro Webcam') }
+device ||= devices.find { |device| device.include?('Built-in') }
+
 puts "Taking capture into #{file_path}!"
-system "#{IMAGESNAP} -q -w 3 #{file_path.sub(' ', '\ ')} &"
+system "#{IMAGESNAP} -d \"#{device}\" -q -w 3 #{file_path.sub(' ', '\ ')} &"
 
 exit 0
