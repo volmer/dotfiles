@@ -4,7 +4,7 @@
     "editor.tabSize": 2,
     "editor.rulers": [
         80,
-        120
+        100
     ],
     "workbench.startupEditor": "newUntitledFile",
     "files.insertFinalNewline": true,
