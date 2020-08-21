@@ -21,5 +21,7 @@
     "explorer.confirmDragAndDrop": false,
     "ruby.intellisense": "rubyLocate",
     "ruby.codeCompletion": "rcodetools",
-    "eslint.packageManager": "yarn"
+    "eslint.packageManager": "yarn",
+    "eslint.lintTask.options": ". --ext js,jsx",
+    "diffEditor.ignoreTrimWhitespace": false
 }
