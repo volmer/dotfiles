@@ -1,5 +1,0 @@
-#!/bin/bash
-
-for i in ~/.dotfiles/{aliases,environment}/*.sh ; do
-  source $i ;
-done
