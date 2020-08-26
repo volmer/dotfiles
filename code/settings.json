@@ -23,5 +23,8 @@
     "ruby.codeCompletion": "rcodetools",
     "eslint.packageManager": "yarn",
     "eslint.lintTask.options": ". --ext js,jsx",
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.exclude": {
+        "**/.svn": false
+    }
 }
