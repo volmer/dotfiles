@@ -1,10 +1,6 @@
 function rmb () {
   current_branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 
-  if [ "$current_branch" != "master" ]; then
-    echo "WARNING: You are on branch $current_branch, NOT master."
-  fi
-
   echo "Fetching merged branches..."
 
   git remote prune origin
@@ -20,9 +16,8 @@ function rmb () {
       echo "$branches"
     fi
 
-    read -p "Continue? (y/n): " -n 1 choice
-    echo
-    if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
+    if read -q "choice?Continue? (y/n): "; then
+      echo "\n"
       git branch -d `git branch --merged | grep -v 'master$' | grep -v "$current_branch$" | sed 's/origin\///g' | tr -d '\n'`
     else
       echo "No branches removed."
