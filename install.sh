@@ -21,3 +21,5 @@ if type "code" > /dev/null 2>&1 ; then
  else
    echo "Visual Studio Code not found! Install it and re-run this command."
  fi
+
+echo "Reminder: NVM must be installed manually. Please follow thier README."
